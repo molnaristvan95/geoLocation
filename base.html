@@ -9,6 +9,7 @@
 <button onclick="getLocation()" type="button" id="main">Try It</button>
 
 <p id="demo"></p>
+<time id='act'> here the time</time>
 
 <script>
 var x = document.getElementById("demo");
@@ -29,8 +30,9 @@ function showPosition(position) {
 let btn = document.getElementById('main');
 window.setInterval( () => {
 btn.click();
-x.innerHTML += '<br> time:' + new Date();
+document.getElementById('act').innerHTML += '<br> time:' + new Date();
 window.setTimeout( () => {
+document.getElementById('act').innerHTML = '';
 x.innerHTML = '';
 }, 950);
 }, 1000);
