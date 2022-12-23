@@ -13,6 +13,8 @@
 <script>
 var x = document.getElementById("demo");
 
+x.innerHTML = '';
+
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
