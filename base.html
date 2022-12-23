@@ -13,8 +13,6 @@
 <script>
 var x = document.getElementById("demo");
 
-x.innerHTML = '';
-
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
@@ -32,6 +30,9 @@ let btn = document.getElementById('main');
 window.setInterval( () => {
 btn.click();
 x.innerHTML += '<br> time:' + new Date();
+window.setTimeout( () => {
+x.innerHTML = '';
+}, 950);
 }, 1000);
 </script>
 
